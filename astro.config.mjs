@@ -5,16 +5,15 @@ import tailwind from "@astrojs/tailwind";
 
 import vercel from "@astrojs/vercel/serverless";
 
+import node from '@astrojs/node';
+
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  output: 'static',
   // if 使用 docker, 请将 adapter 切换到 node
   // adapter: node({
   //   mode: 'standalone'
   // }),
-  adapter: vercel({
-    analytics: true
-  }),
   integrations: [react(), tailwind()],
   markdown: {
     // Example: Switch to use prism for syntax highlighting in Markdown
